@@ -10,17 +10,11 @@ export const authRoutes = [
   path:ADMIN_ROUTE,
   Component: Admin
 },
-{
-  path:BASKET_ROUTE,
-  Component: Basket
-},
+
 ]
 
 export const publicRoutes = [
-  {
-    path:ADMIN_ROUTE,
-    Component: Admin
-  },
+  
   {
     path:BASKET_ROUTE,
     Component: Basket

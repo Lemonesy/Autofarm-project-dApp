@@ -1,0 +1,92 @@
+.farm-page {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.h2-main-farm-page {
+  margin: 0 auto;
+
+}
+
+.h1-main-farm-page {
+  margin: 0 auto;
+}
+
+.content-main-staking-pools {
+
+}
+
+.h1-staking-pools {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.content-main-staking-grid {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 16px;
+  cursor: pointer;
+  max-width: 700px;
+  width: 100%;
+  padding: 16px;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.content-main-staking-block {
+  /* border-radius: 16px; */
+  padding: 0px 24px;
+  background: rgb(30, 32, 48);
+  width: 700px;
+
+}
+
+
+
+.content-block {
+  margin-top: -16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  transition: max-height 0.2s ease-out;
+  background: rgb(30, 32, 48);
+}
+
+.content-main-staking-coin-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.grid-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.block-info-LP {
+  /* display: block; */
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
+}
+
+.content-main-staking-block-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.profit-info {
+  display: flex;
+  flex-direction: column;
+
+  /* display: block; */
+  margin: 20px 0 15px 0;
+}

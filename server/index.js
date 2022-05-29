@@ -8,7 +8,7 @@ const fileUpload = require('express-fileupload')
 const router = require('./routes/index')
 const errorHandler = require('./middleware/ErrorHandlingMiddleware') 
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 5000;
 
 const app = express()
 app.use(cors())
@@ -24,8 +24,8 @@ const start = async () => {
 
   await sequelize.authenticate()
   await sequelize.sync() // сверяет состоянии БД со схемой данных
-  app.listen(PORT, () => console.log('Server started on port 3333 !'));
-  } catch(e) { // чтобы отлавливать ошибки и приложение не падало
+  app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+} catch(e) { // чтобы отлавливать ошибки и приложение не падало
     console.log(e)
   }
 }

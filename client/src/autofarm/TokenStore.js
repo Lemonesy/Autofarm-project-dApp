@@ -5,12 +5,15 @@ import {makeAutoObservable} from "mobx";
 export default class TokenStore {
     constructor() {
         this._types = [
-          {id: 1, name: 'USDT'},
-          {id: 2, name: 'USDT2'}
+          {id: 2, name: 'Staked only'},
+          {id: 3, name: 'Show finished'}
+
         ]
         this._brands = [
-          {id: 1, name: 'BNB'},
-          {id: 2, name: 'BSW'}
+          {id: 1, name: 'All'},
+          {id: 2, name: 'BSW'},
+          {id: 3, name: 'BNB'}
+
         ]
         this._tokens = [
           {id: 3, name:'TEST NAME', price: 28.2, apy: 83},
@@ -19,6 +22,9 @@ export default class TokenStore {
           {id: 6, name:'TEST NAME4', price: 8.2, apy: 83}
 
         ]
+        this._selectedType = {}
+        this._selectedBrand = {}
+
         makeAutoObservable(this)
     }
 
@@ -31,6 +37,12 @@ export default class TokenStore {
     setTokens(tokens) {
       this._tokens = tokens
   }
+    setSelectedType(type) {
+this._selectedType = type
+    }
+    setSelectedBrand(brand) {
+      this._selectedBrand = brand
+          }
 
 
     get types() {
@@ -42,4 +54,11 @@ export default class TokenStore {
     get tokens() {
       return this._tokens
   }
+
+  get selectedType() {
+    return this._selectedType
+}
+get selectedBrand() {
+  return this._selectedBrand
+}
 }
